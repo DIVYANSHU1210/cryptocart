@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Crypto from "./components/Crypto";
+import "./app.css";
 
 function App() {
   const [btc, setBtc] = useState(0);
@@ -36,8 +37,8 @@ function App() {
 
   return (
     <div>
-      <div>
-        <div className="btc">
+      <div className="crypto-view">
+        <div className="crypto">
           <Crypto
             name="BTC"
             price={btcPrice}
@@ -55,7 +56,7 @@ function App() {
             clickFunc={handleDoge}
           />
         </div>
-        <div className="ripple">
+        <div className="crypto">
           <Crypto
             name="RIPPLE"
             price={ripplePrice}
@@ -65,7 +66,7 @@ function App() {
           ></Crypto>
         </div>
       </div>
-      <div className="myCart">
+      <div className="cart">
         <h3>MY CART</h3>
         <table>
           <thead>
